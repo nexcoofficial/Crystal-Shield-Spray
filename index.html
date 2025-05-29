@@ -445,7 +445,38 @@
             }
         }
 
-        /* Mobile Responsive */
+        /* Add fallback for images */
+        img {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-weight: bold;
+        }
+        
+        img:before {
+            content: "Crystal Shield Spray";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            opacity: 0;
+        }
+
+        img[src=""], img:not([src]) {
+            opacity: 0;
+        }
+
+        img[src=""]:before, img:not([src]):before {
+            opacity: 1;
+        }
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -560,7 +591,14 @@
         <div class="container">
             <div class="product-grid">
                 <div class="product-images">
-                    <img src="https://cdn.wshopon.com/image/42393f4e792e7c9423c305624d0b4c088bef57c8-700.jpeg" alt="Crystal Shield Spray" class="main-product-img">
+                    <img width="100%" src="https://cdn.wshopon.com/image/42393f4e792e7c9423c305624d0b4c088bef57c8-700.jpeg" alt="Crystal Shield Spray" class="main-product-img" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="width: 100%; height: 400px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; display: none; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold; box-shadow: 0 20px 40px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                        <div style="text-align: center;">
+                            <div style="font-size: 4rem; margin-bottom: 20px;">🧴</div>
+                            <div>CRYSTAL SHIELD SPRAY</div>
+                            <div style="font-size: 1rem; opacity: 0.8; margin-top: 10px;">Premium Glass Cleaner</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="product-info">
                     <h2>Revolusi Pembersih Kaca Terdepan</h2>
@@ -614,22 +652,40 @@
             <h2>Bukti Nyata Sebelum & Sesudah</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://cdn.wshopon.com/image/db8bd0f72b2a77060f0538c2b8962d74d3bbf7a9.gif" alt="Proses pembersihan">
+                    <img src="https://cdn.wshopon.com/image/db8bd0f72b2a77060f0538c2b8962d74d3bbf7a9.gif" alt="Demo pembersihan Crystal Shield" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="width: 100%; height: 250px; background: linear-gradient(45deg, #4CAF50, #8BC34A); border-radius: 15px; display: none; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                        <div style="text-align: center;"><div style="font-size: 3rem; margin-bottom: 10px;">🎬</div><div>DEMO PEMBERSIHAN</div></div>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://cdn.wshopon.com/image/52ae3d9f482e10439dd4e7f2c1d86c8e2619887a-600.jpeg" alt="Hasil pembersihan">
+                    <img src="https://cdn.wshopon.com/image/52ae3d9f482e10439dd4e7f2c1d86c8e2619887a-600.jpeg" alt="Hasil pembersihan kaca" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="width: 100%; height: 250px; background: linear-gradient(45deg, #2196F3, #21CBF3); border-radius: 15px; display: none; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                        <div style="text-align: center;"><div style="font-size: 3rem; margin-bottom: 10px;">✨</div><div>HASIL CRYSTAL CLEAR</div></div>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://cdn.wshopon.com/image/a617913aad69fc8f7f609607dbad562dbeffe4c0-600.jpeg" alt="Kaca mobil bersih">
+                    <img src="https://cdn.wshopon.com/image/a617913aad69fc8f7f609607dbad562dbeffe4c0-600.jpeg" alt="Aplikasi pada kaca mobil" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="width: 100%; height: 250px; background: linear-gradient(45deg, #FF9800, #FFC107); border-radius: 15px; display: none; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                        <div style="text-align: center;"><div style="font-size: 3rem; margin-bottom: 10px;">🚗</div><div>KACA MOBIL BERSIH</div></div>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://cdn.wshopon.com/image/58ccddc0e2a74f0f4bbdea881d8746d4060070ee-600.jpeg" alt="Aplikasi produk">
+                    <img src="https://cdn.wshopon.com/image/58ccddc0e2a74f0f4bbdea881d8746d4060070ee-600.jpeg" alt="Cara aplikasi spray" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="width: 100%; height: 250px; background: linear-gradient(45deg, #9C27B0, #E91E63); border-radius: 15px; display: none; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                        <div style="text-align: center;"><div style="font-size: 3rem; margin-bottom: 10px;">💧</div><div>APLIKASI MUDAH</div></div>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://cdn.wshopon.com/image/f11f1153617c1d56147f97f2ac23cfd0560666f7-600.jpeg" alt="Hasil akhir">
+                    <img src="https://cdn.wshopon.com/image/f11f1153617c1d56147f97f2ac23cfd0560666f7-600.jpeg" alt="Hasil akhir jernih" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="width: 100%; height: 250px; background: linear-gradient(45deg, #00BCD4, #009688); border-radius: 15px; display: none; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                        <div style="text-align: center;"><div style="font-size: 3rem; margin-bottom: 10px;">🏆</div><div>HASIL MAKSIMAL</div></div>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://cdn.wshopon.com/image/a733f55a70e4fc8978243908391fe4cb094867fa-600.jpeg" alt="Perlindungan kaca">
+                    <img src="https://cdn.wshopon.com/image/a733f55a70e4fc8978243908391fe4cb094867fa-600.jpeg" alt="Perlindungan anti jamur" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="width: 100%; height: 250px; background: linear-gradient(45deg, #FF5722, #FF9800); border-radius: 15px; display: none; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                        <div style="text-align: center;"><div style="font-size: 3rem; margin-bottom: 10px;">🛡️</div><div>PERLINDUNGAN ANTI JAMUR</div></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -714,13 +770,22 @@
         <div class="container">
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://cdn.wshopon.com/image/22d4911efa959ef436806b74038eacd39f4ea0b5-600.jpeg" alt="Aplikasi mudah">
+                    <img width="100%" src="https://cdn.wshopon.com/image/22d4911efa959ef436806b74038eacd39f4ea0b5-600.jpeg" alt="Aplikasi mudah spray" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="width: 100%; height: 250px; background: linear-gradient(45deg, #673AB7, #9C27B0); border-radius: 15px; display: none; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                        <div style="text-align: center;"><div style="font-size: 3rem; margin-bottom: 10px;">🤝</div><div>APLIKASI MUDAH</div></div>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://cdn.wshopon.com/image/6b880ec5e62720b5f96e4ac7b19761d08a36d72d-600.jpeg" alt="Hasil maksimal">
+                    <img width="100%" src="https://cdn.wshopon.com/image/6b880ec5e62720b5f96e4ac7b19761d08a36d72d-600.jpeg" alt="Hasil maksimal premium" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="width: 100%; height: 250px; background: linear-gradient(45deg, #3F51B5, #2196F3); border-radius: 15px; display: none; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                        <div style="text-align: center;"><div style="font-size: 3rem; margin-bottom: 10px;">💎</div><div>HASIL MAKSIMAL</div></div>
+                    </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://cdn.wshopon.com/image/971ca530feb14240b9436b1ede4003b77c8f48f8-600.jpeg" alt="Perlindungan tahan lama">
+                    <img width="100%" src="https://cdn.wshopon.com/image/971ca530feb14240b9436b1ede4003b77c8f48f8-600.jpeg" alt="Perlindungan tahan lama" referrerpolicy="no-referrer" crossorigin="anonymous" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="width: 100%; height: 250px; background: linear-gradient(45deg, #4CAF50, #8BC34A); border-radius: 15px; display: none; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                        <div style="text-align: center;"><div style="font-size: 3rem; margin-bottom: 10px;">⏰</div><div>PERLINDUNGAN TAHAN LAMA</div></div>
+                    </div>
                 </div>
             </div>
         </div>
